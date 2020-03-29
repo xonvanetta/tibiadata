@@ -1,0 +1,1054 @@
+{
+  "guild": {
+    "data": {
+      "name": "Red Rose",
+      "description": "We are an ancient guild of Good, followers of Banor. We are peaceloving and try to uphold law and noble virtues, but like the rose we have sharp thorns, too! - Founded December 7th 1998 - - Proud winner of the first ever Tibian Football League - Recruitment is currently open! Contact us at our forum.",
+      "guildhall": {
+        "name": "Guildhall of the Red Rose",
+        "town": "",
+        "paid": "2020-02-13",
+        "world": "Antica",
+        "houseid": 0
+      },
+      "application": false,
+      "war": false,
+      "online_status": 3,
+      "offline_status": 118,
+      "disbanded": false,
+      "totalmembers": 121,
+      "totalinvited": 0,
+      "world": "Antica",
+      "founded": "2002-02-18",
+      "active": true,
+      "homepage": "redrose-guild.com\/forum",
+      "guildlogo": "https:\/\/api.tibiadata.com\/statictibiacom\/guildlogos_Antica_https__static.tibia.com_images_guildlogos_Red_Rose.gif"
+    },
+    "members": [
+      {
+        "rank_title": "Leader",
+        "characters": [
+          {
+            "name": "Avora Skyfallen",
+            "nick": "Ambassador",
+            "level": 239,
+            "vocation": "Master Sorcerer",
+            "joined": "2013-04-07",
+            "status": "offline"
+          },
+          {
+            "name": "Chikilina",
+            "nick": "Temporarius",
+            "level": 283,
+            "vocation": "Elite Knight",
+            "joined": "2009-04-19",
+            "status": "offline"
+          },
+          {
+            "name": "Cotelaria",
+            "nick": "",
+            "level": 130,
+            "vocation": "Elder Druid",
+            "joined": "2018-11-06",
+            "status": "offline"
+          },
+          {
+            "name": "Eldrivuz",
+            "nick": "Recruiter",
+            "level": 202,
+            "vocation": "Master Sorcerer",
+            "joined": "2018-04-15",
+            "status": "offline"
+          },
+          {
+            "name": "Natures Lord",
+            "nick": "Magister Noviciorum",
+            "level": 231,
+            "vocation": "Royal Paladin",
+            "joined": "2010-12-20",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Praetor",
+        "characters": [
+          {
+            "name": "Miujau",
+            "nick": "",
+            "level": 321,
+            "vocation": "Elite Knight",
+            "joined": "2014-02-17",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Aedilus",
+        "characters": [
+          {
+            "name": "Man of electric",
+            "nick": "",
+            "level": 294,
+            "vocation": "Elder Druid",
+            "joined": "2010-11-19",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Eques",
+        "characters": [
+          {
+            "name": "Fretyn",
+            "nick": "",
+            "level": 412,
+            "vocation": "Elite Knight",
+            "joined": "2017-05-07",
+            "status": "offline"
+          },
+          {
+            "name": "Lady Silverheart",
+            "nick": "",
+            "level": 100,
+            "vocation": "Elite Knight",
+            "joined": "2017-12-05",
+            "status": "offline"
+          },
+          {
+            "name": "Skyzo",
+            "nick": "",
+            "level": 333,
+            "vocation": "Royal Paladin",
+            "joined": "2017-12-17",
+            "status": "offline"
+          },
+          {
+            "name": "Spear bear",
+            "nick": "",
+            "level": 70,
+            "vocation": "Paladin",
+            "joined": "2016-03-10",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Inceptor",
+        "characters": [
+          {
+            "name": "Adventurer Ceori",
+            "nick": "",
+            "level": 143,
+            "vocation": "Elite Knight",
+            "joined": "2016-03-06",
+            "status": "offline"
+          },
+          {
+            "name": "Ashyrstar",
+            "nick": "",
+            "level": 324,
+            "vocation": "Master Sorcerer",
+            "joined": "2019-11-11",
+            "status": "offline"
+          },
+          {
+            "name": "Asteiro",
+            "nick": "",
+            "level": 225,
+            "vocation": "Royal Paladin",
+            "joined": "2017-08-13",
+            "status": "offline"
+          },
+          {
+            "name": "Core Wetterwachs",
+            "nick": "",
+            "level": 459,
+            "vocation": "Elite Knight",
+            "joined": "2019-01-13",
+            "status": "online"
+          },
+          {
+            "name": "Leojaliz",
+            "nick": "",
+            "level": 174,
+            "vocation": "Elite Knight",
+            "joined": "2010-06-14",
+            "status": "offline"
+          },
+          {
+            "name": "Mihiron",
+            "nick": "",
+            "level": 167,
+            "vocation": "Elite Knight",
+            "joined": "2018-12-02",
+            "status": "offline"
+          },
+          {
+            "name": "Zap Eldorath",
+            "nick": "",
+            "level": 26,
+            "vocation": "Elder Druid",
+            "joined": "2019-11-24",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Auxiliarius",
+        "characters": [
+          {
+            "name": "Agrippa",
+            "nick": "",
+            "level": 49,
+            "vocation": "Elite Knight",
+            "joined": "2008-07-14",
+            "status": "offline"
+          },
+          {
+            "name": "Annie Belle",
+            "nick": "",
+            "level": 356,
+            "vocation": "Druid",
+            "joined": "2019-06-23",
+            "status": "offline"
+          },
+          {
+            "name": "Aroen",
+            "nick": "",
+            "level": 92,
+            "vocation": "Elder Druid",
+            "joined": "2014-09-10",
+            "status": "offline"
+          },
+          {
+            "name": "Ashryriel Imladris",
+            "nick": "",
+            "level": 251,
+            "vocation": "Royal Paladin",
+            "joined": "2020-01-30",
+            "status": "online"
+          },
+          {
+            "name": "Ashyriah",
+            "nick": "",
+            "level": 348,
+            "vocation": "Elder Druid",
+            "joined": "2019-12-10",
+            "status": "offline"
+          },
+          {
+            "name": "Bookeeper",
+            "nick": "",
+            "level": 8,
+            "vocation": "Sorcerer",
+            "joined": "2018-09-14",
+            "status": "offline"
+          },
+          {
+            "name": "Concertina",
+            "nick": "",
+            "level": 81,
+            "vocation": "Elder Druid",
+            "joined": "2010-03-12",
+            "status": "offline"
+          },
+          {
+            "name": "Dagg Lija",
+            "nick": "",
+            "level": 83,
+            "vocation": "Knight",
+            "joined": "2014-03-25",
+            "status": "offline"
+          },
+          {
+            "name": "Eteart",
+            "nick": "",
+            "level": 159,
+            "vocation": "Elite Knight",
+            "joined": "2019-09-01",
+            "status": "offline"
+          },
+          {
+            "name": "Fe",
+            "nick": "",
+            "level": 66,
+            "vocation": "Knight",
+            "joined": "2008-12-28",
+            "status": "offline"
+          },
+          {
+            "name": "Fratyn",
+            "nick": "",
+            "level": 169,
+            "vocation": "Royal Paladin",
+            "joined": "2019-01-15",
+            "status": "offline"
+          },
+          {
+            "name": "Fred Kombues",
+            "nick": "",
+            "level": 40,
+            "vocation": "Druid",
+            "joined": "2015-11-01",
+            "status": "offline"
+          },
+          {
+            "name": "Ghargh",
+            "nick": "",
+            "level": 103,
+            "vocation": "Paladin",
+            "joined": "2012-08-05",
+            "status": "offline"
+          },
+          {
+            "name": "Grey Spectre",
+            "nick": "",
+            "level": 61,
+            "vocation": "Royal Paladin",
+            "joined": "2013-07-14",
+            "status": "offline"
+          },
+          {
+            "name": "Hirter Morchel",
+            "nick": "",
+            "level": 22,
+            "vocation": "Paladin",
+            "joined": "2013-01-06",
+            "status": "offline"
+          },
+          {
+            "name": "His Duudeness",
+            "nick": "",
+            "level": 79,
+            "vocation": "Paladin",
+            "joined": "2012-08-30",
+            "status": "offline"
+          },
+          {
+            "name": "Jana Sedai",
+            "nick": "",
+            "level": 364,
+            "vocation": "Royal Paladin",
+            "joined": "2012-09-23",
+            "status": "offline"
+          },
+          {
+            "name": "Kaerell",
+            "nick": "",
+            "level": 68,
+            "vocation": "Elite Knight",
+            "joined": "2018-09-16",
+            "status": "offline"
+          },
+          {
+            "name": "Kajala",
+            "nick": "",
+            "level": 79,
+            "vocation": "Elder Druid",
+            "joined": "2017-12-31",
+            "status": "offline"
+          },
+          {
+            "name": "Khagan",
+            "nick": "",
+            "level": 229,
+            "vocation": "Royal Paladin",
+            "joined": "2019-12-01",
+            "status": "offline"
+          },
+          {
+            "name": "Lor Oak",
+            "nick": "",
+            "level": 51,
+            "vocation": "Elder Druid",
+            "joined": "2013-11-17",
+            "status": "offline"
+          },
+          {
+            "name": "Melitabbin Loth",
+            "nick": "",
+            "level": 54,
+            "vocation": "Master Sorcerer",
+            "joined": "2018-12-13",
+            "status": "offline"
+          },
+          {
+            "name": "Menhyt",
+            "nick": "",
+            "level": 32,
+            "vocation": "None",
+            "joined": "2020-01-03",
+            "status": "offline"
+          },
+          {
+            "name": "Mestre da pizza",
+            "nick": "",
+            "level": 238,
+            "vocation": "Elder Druid",
+            "joined": "2019-12-01",
+            "status": "offline"
+          },
+          {
+            "name": "Miraculix der Gallier",
+            "nick": "",
+            "level": 30,
+            "vocation": "Druid",
+            "joined": "2002-02-19",
+            "status": "offline"
+          },
+          {
+            "name": "Nonearound",
+            "nick": "",
+            "level": 50,
+            "vocation": "None",
+            "joined": "2015-07-30",
+            "status": "offline"
+          },
+          {
+            "name": "Poneiss",
+            "nick": "",
+            "level": 51,
+            "vocation": "Paladin",
+            "joined": "2008-10-25",
+            "status": "offline"
+          },
+          {
+            "name": "Quev",
+            "nick": "",
+            "level": 8,
+            "vocation": "Druid",
+            "joined": "2020-02-04",
+            "status": "offline"
+          },
+          {
+            "name": "Razzles Revenge",
+            "nick": "",
+            "level": 84,
+            "vocation": "Elder Druid",
+            "joined": "2011-08-23",
+            "status": "offline"
+          },
+          {
+            "name": "Red Rose Guard",
+            "nick": "",
+            "level": 23,
+            "vocation": "Knight",
+            "joined": "2018-02-08",
+            "status": "offline"
+          },
+          {
+            "name": "Red Rose Librarian",
+            "nick": "",
+            "level": 8,
+            "vocation": "Druid",
+            "joined": "2016-05-05",
+            "status": "offline"
+          },
+          {
+            "name": "Red Rose Sharpshooter",
+            "nick": "",
+            "level": 8,
+            "vocation": "Paladin",
+            "joined": "2020-02-04",
+            "status": "offline"
+          },
+          {
+            "name": "Redokin Roskyre",
+            "nick": "",
+            "level": 56,
+            "vocation": "Elder Druid",
+            "joined": "2010-07-10",
+            "status": "offline"
+          },
+          {
+            "name": "Rustan",
+            "nick": "",
+            "level": 50,
+            "vocation": "Elder Druid",
+            "joined": "2010-01-26",
+            "status": "offline"
+          },
+          {
+            "name": "Ryzn Archangel",
+            "nick": "",
+            "level": 394,
+            "vocation": "Elite Knight",
+            "joined": "2020-01-30",
+            "status": "offline"
+          },
+          {
+            "name": "Sailor Spoon",
+            "nick": "",
+            "level": 119,
+            "vocation": "Elite Knight",
+            "joined": "2012-08-30",
+            "status": "offline"
+          },
+          {
+            "name": "Shadow of Banor",
+            "nick": "",
+            "level": 63,
+            "vocation": "Master Sorcerer",
+            "joined": "2014-12-23",
+            "status": "offline"
+          },
+          {
+            "name": "Shadow of Rage",
+            "nick": "",
+            "level": 61,
+            "vocation": "Master Sorcerer",
+            "joined": "2008-02-03",
+            "status": "offline"
+          },
+          {
+            "name": "Sir Crowley",
+            "nick": "",
+            "level": 158,
+            "vocation": "Master Sorcerer",
+            "joined": "2010-08-24",
+            "status": "offline"
+          },
+          {
+            "name": "Spike",
+            "nick": "",
+            "level": 21,
+            "vocation": "Druid",
+            "joined": "2007-06-24",
+            "status": "offline"
+          },
+          {
+            "name": "Vartan",
+            "nick": "",
+            "level": 16,
+            "vocation": "None",
+            "joined": "2007-11-06",
+            "status": "offline"
+          },
+          {
+            "name": "Zazgan Xeldrain",
+            "nick": "",
+            "level": 35,
+            "vocation": "None",
+            "joined": "2007-06-23",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Propraetor",
+        "characters": [
+          {
+            "name": "Avenlia Silvershade",
+            "nick": "",
+            "level": 162,
+            "vocation": "Royal Paladin",
+            "joined": "2012-01-08",
+            "status": "offline"
+          },
+          {
+            "name": "Beowulf",
+            "nick": "Senior Warlord",
+            "level": 50,
+            "vocation": "Knight",
+            "joined": "2002-02-18",
+            "status": "offline"
+          },
+          {
+            "name": "Black Falcon",
+            "nick": "",
+            "level": 214,
+            "vocation": "Elite Knight",
+            "joined": "2013-10-28",
+            "status": "offline"
+          },
+          {
+            "name": "Buffy",
+            "nick": "",
+            "level": 61,
+            "vocation": "Paladin",
+            "joined": "2005-05-30",
+            "status": "offline"
+          },
+          {
+            "name": "B\u00fcrgy",
+            "nick": "",
+            "level": 85,
+            "vocation": "Royal Paladin",
+            "joined": "2002-02-18",
+            "status": "offline"
+          },
+          {
+            "name": "Cinny",
+            "nick": "",
+            "level": 251,
+            "vocation": "Royal Paladin",
+            "joined": "2010-06-14",
+            "status": "offline"
+          },
+          {
+            "name": "Coronius",
+            "nick": "",
+            "level": 199,
+            "vocation": "Paladin",
+            "joined": "2009-02-07",
+            "status": "offline"
+          },
+          {
+            "name": "Driundar",
+            "nick": "",
+            "level": 108,
+            "vocation": "Master Sorcerer",
+            "joined": "2016-05-01",
+            "status": "offline"
+          },
+          {
+            "name": "Dunja",
+            "nick": "",
+            "level": 86,
+            "vocation": "Royal Paladin",
+            "joined": "2008-10-24",
+            "status": "offline"
+          },
+          {
+            "name": "Gryphis",
+            "nick": "",
+            "level": 205,
+            "vocation": "Knight",
+            "joined": "2014-01-12",
+            "status": "offline"
+          },
+          {
+            "name": "Hagbard",
+            "nick": "",
+            "level": 89,
+            "vocation": "Sorcerer",
+            "joined": "2007-06-17",
+            "status": "offline"
+          },
+          {
+            "name": "Halfhigh",
+            "nick": "",
+            "level": 232,
+            "vocation": "Elite Knight",
+            "joined": "2005-05-13",
+            "status": "offline"
+          },
+          {
+            "name": "Lightbringer",
+            "nick": "",
+            "level": 79,
+            "vocation": "Paladin",
+            "joined": "2002-02-19",
+            "status": "offline"
+          },
+          {
+            "name": "Majestix",
+            "nick": "",
+            "level": 28,
+            "vocation": "Knight",
+            "joined": "2002-02-19",
+            "status": "offline"
+          },
+          {
+            "name": "Mild",
+            "nick": "",
+            "level": 120,
+            "vocation": "Elite Knight",
+            "joined": "2010-08-24",
+            "status": "offline"
+          },
+          {
+            "name": "Octavian",
+            "nick": "",
+            "level": 188,
+            "vocation": "Royal Paladin",
+            "joined": "2005-05-13",
+            "status": "offline"
+          },
+          {
+            "name": "Octipuss",
+            "nick": "",
+            "level": 81,
+            "vocation": "Sorcerer",
+            "joined": "2008-02-29",
+            "status": "offline"
+          },
+          {
+            "name": "Pepelu",
+            "nick": "The Priest",
+            "level": 165,
+            "vocation": "Royal Paladin",
+            "joined": "2003-12-07",
+            "status": "offline"
+          },
+          {
+            "name": "Rob'Doomsday",
+            "nick": "",
+            "level": 141,
+            "vocation": "Royal Paladin",
+            "joined": "2017-11-26",
+            "status": "offline"
+          },
+          {
+            "name": "Sara Lionheart",
+            "nick": "",
+            "level": 32,
+            "vocation": "Druid",
+            "joined": "2004-10-03",
+            "status": "offline"
+          },
+          {
+            "name": "Seiya do pegasus",
+            "nick": "",
+            "level": 187,
+            "vocation": "Knight",
+            "joined": "2008-10-24",
+            "status": "offline"
+          },
+          {
+            "name": "Silvarion",
+            "nick": "Pater Rosae Rubrae",
+            "level": 62,
+            "vocation": "Master Sorcerer",
+            "joined": "2002-02-18",
+            "status": "offline"
+          },
+          {
+            "name": "Simet",
+            "nick": "",
+            "level": 51,
+            "vocation": "Sorcerer",
+            "joined": "2003-06-18",
+            "status": "offline"
+          },
+          {
+            "name": "Simu Osira",
+            "nick": "",
+            "level": 183,
+            "vocation": "Sorcerer",
+            "joined": "2010-12-13",
+            "status": "offline"
+          },
+          {
+            "name": "Sir Balder",
+            "nick": "",
+            "level": 116,
+            "vocation": "Knight",
+            "joined": "2008-10-24",
+            "status": "offline"
+          },
+          {
+            "name": "Sir mats",
+            "nick": "",
+            "level": 230,
+            "vocation": "Sorcerer",
+            "joined": "2013-03-03",
+            "status": "offline"
+          },
+          {
+            "name": "Smashing Pumpkin",
+            "nick": "",
+            "level": 310,
+            "vocation": "Royal Paladin",
+            "joined": "2012-10-28",
+            "status": "offline"
+          },
+          {
+            "name": "Tharanis",
+            "nick": "",
+            "level": 71,
+            "vocation": "Druid",
+            "joined": "2002-02-19",
+            "status": "offline"
+          },
+          {
+            "name": "Vartan Zol",
+            "nick": "",
+            "level": 100,
+            "vocation": "Paladin",
+            "joined": "2007-01-31",
+            "status": "offline"
+          },
+          {
+            "name": "Zhayban",
+            "nick": "",
+            "level": 111,
+            "vocation": "Paladin",
+            "joined": "2007-09-05",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Rosa Absentia",
+        "characters": [
+          {
+            "name": "Bulok",
+            "nick": "Sleeper",
+            "level": 164,
+            "vocation": "Knight",
+            "joined": "2002-02-28",
+            "status": "offline"
+          },
+          {
+            "name": "Caramo",
+            "nick": "",
+            "level": 72,
+            "vocation": "Knight",
+            "joined": "2006-06-22",
+            "status": "offline"
+          },
+          {
+            "name": "Cary",
+            "nick": "",
+            "level": 43,
+            "vocation": "Paladin",
+            "joined": "2004-06-23",
+            "status": "offline"
+          },
+          {
+            "name": "Darkness power",
+            "nick": "",
+            "level": 166,
+            "vocation": "Royal Paladin",
+            "joined": "2011-09-25",
+            "status": "offline"
+          },
+          {
+            "name": "Don Quixote",
+            "nick": "",
+            "level": 34,
+            "vocation": "Paladin",
+            "joined": "2002-02-19",
+            "status": "offline"
+          },
+          {
+            "name": "Gimli Wulfstan",
+            "nick": "",
+            "level": 149,
+            "vocation": "Elite Knight",
+            "joined": "2010-06-03",
+            "status": "offline"
+          },
+          {
+            "name": "Held",
+            "nick": "",
+            "level": 82,
+            "vocation": "Paladin",
+            "joined": "2002-02-18",
+            "status": "offline"
+          },
+          {
+            "name": "Kolsk\u00e4gg",
+            "nick": "",
+            "level": 81,
+            "vocation": "Paladin",
+            "joined": "2003-01-29",
+            "status": "offline"
+          },
+          {
+            "name": "Loella",
+            "nick": "",
+            "level": 195,
+            "vocation": "Master Sorcerer",
+            "joined": "2013-08-18",
+            "status": "offline"
+          },
+          {
+            "name": "Lord nemesis",
+            "nick": "",
+            "level": 99,
+            "vocation": "Knight",
+            "joined": "2006-11-07",
+            "status": "offline"
+          },
+          {
+            "name": "Meriado",
+            "nick": "",
+            "level": 114,
+            "vocation": "Knight",
+            "joined": "2011-04-03",
+            "status": "offline"
+          },
+          {
+            "name": "Mordok",
+            "nick": "",
+            "level": 35,
+            "vocation": "Master Sorcerer",
+            "joined": "2002-02-18",
+            "status": "offline"
+          },
+          {
+            "name": "Neppot",
+            "nick": "Football Coach",
+            "level": 133,
+            "vocation": "Paladin",
+            "joined": "2014-11-16",
+            "status": "offline"
+          },
+          {
+            "name": "Nirdor",
+            "nick": "",
+            "level": 131,
+            "vocation": "Elite Knight",
+            "joined": "2009-07-05",
+            "status": "offline"
+          },
+          {
+            "name": "Parrilla",
+            "nick": "",
+            "level": 141,
+            "vocation": "Elite Knight",
+            "joined": "2015-10-05",
+            "status": "offline"
+          },
+          {
+            "name": "Rafos",
+            "nick": "",
+            "level": 107,
+            "vocation": "Knight",
+            "joined": "2005-05-20",
+            "status": "offline"
+          },
+          {
+            "name": "Sasirel",
+            "nick": "",
+            "level": 174,
+            "vocation": "Royal Paladin",
+            "joined": "2013-02-07",
+            "status": "offline"
+          },
+          {
+            "name": "Sir Lostboy",
+            "nick": "Creator of Fibula",
+            "level": 20,
+            "vocation": "Knight",
+            "joined": "2014-11-30",
+            "status": "offline"
+          },
+          {
+            "name": "Sir pichi",
+            "nick": "",
+            "level": 126,
+            "vocation": "Elite Knight",
+            "joined": "2006-10-26",
+            "status": "offline"
+          },
+          {
+            "name": "Ullric",
+            "nick": "",
+            "level": 82,
+            "vocation": "Knight",
+            "joined": "2013-08-12",
+            "status": "offline"
+          },
+          {
+            "name": "Xah're",
+            "nick": "",
+            "level": 193,
+            "vocation": "Royal Paladin",
+            "joined": "2010-03-15",
+            "status": "offline"
+          },
+          {
+            "name": "Yomo",
+            "nick": "",
+            "level": 102,
+            "vocation": "Master Sorcerer",
+            "joined": "2019-07-30",
+            "status": "offline"
+          }
+        ]
+      },
+      {
+        "rank_title": "Novicium",
+        "characters": [
+          {
+            "name": "Astra King",
+            "nick": "",
+            "level": 218,
+            "vocation": "Elite Knight",
+            "joined": "2019-10-21",
+            "status": "offline"
+          },
+          {
+            "name": "Dissent",
+            "nick": "",
+            "level": 477,
+            "vocation": "Elite Knight",
+            "joined": "2020-01-05",
+            "status": "offline"
+          },
+          {
+            "name": "Lady Oguro",
+            "nick": "",
+            "level": 382,
+            "vocation": "Elite Knight",
+            "joined": "2019-10-13",
+            "status": "offline"
+          },
+          {
+            "name": "Rubescubes",
+            "nick": "",
+            "level": 211,
+            "vocation": "Knight",
+            "joined": "2019-03-17",
+            "status": "offline"
+          },
+          {
+            "name": "Ryzn",
+            "nick": "",
+            "level": 325,
+            "vocation": "Royal Paladin",
+            "joined": "2020-01-05",
+            "status": "online"
+          }
+        ]
+      },
+      {
+        "rank_title": "Novicium Absentium",
+        "characters": [
+          {
+            "name": "Cyzerion",
+            "nick": "",
+            "level": 130,
+            "vocation": "Paladin",
+            "joined": "2018-01-14",
+            "status": "offline"
+          },
+          {
+            "name": "Quel Marth",
+            "nick": "",
+            "level": 80,
+            "vocation": "Master Sorcerer",
+            "joined": "2013-12-01",
+            "status": "offline"
+          },
+          {
+            "name": "Regin Tishar",
+            "nick": "",
+            "level": 50,
+            "vocation": "Knight",
+            "joined": "2016-05-01",
+            "status": "offline"
+          },
+          {
+            "name": "Vale Brus",
+            "nick": "",
+            "level": 295,
+            "vocation": "Royal Paladin",
+            "joined": "2017-10-15",
+            "status": "offline"
+          }
+        ]
+      }
+    ],
+    "invited": []
+  },
+  "information": {
+    "api_version": 2,
+    "execution_time": 0.2409,
+    "last_updated": "2020-02-05 18:31:26",
+    "timestamp": "2020-02-05 18:31:26"
+  }
+}
