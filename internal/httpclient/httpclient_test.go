@@ -1,9 +1,8 @@
-package v2
+package httpclient
 
 import (
 	"context"
 	"errors"
-	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -26,10 +25,7 @@ func TestContext(t *testing.T) {
 	}))
 	defer server.Close()
 
-	URL = server.URL
-	client := New()
-
-	err := client.get(ctx, "", nil)
+	err := New().Get(ctx, server.URL, nil)
 
 	assert.Error(t, err)
 	assert.True(t, errors.Is(err, context.Canceled))
@@ -51,11 +47,10 @@ func TestRetry(t *testing.T) {
 	}))
 	defer server.Close()
 
-	URL = server.URL
-	client := New()
-
-	information := Information{}
-	err := client.get(context.Background(), "", &information)
+	information := struct {
+		APIVersion int `json:"api_version"`
+	}{}
+	err := New().Get(context.Background(), server.URL, &information)
 
 	assert.NoError(t, err)
 	assert.Equal(t, 2, information.APIVersion)
@@ -71,19 +66,13 @@ func TestErrorBodyText(t *testing.T) {
 
 	defer server.Close()
 
-	URL = server.URL
-	client := New()
-
-	information := Information{}
-	err := client.get(context.Background(), "", &information)
+	information := struct {
+		APIVersion int `json:"api_version"`
+	}{}
+	err := New().Get(context.Background(), server.URL, &information)
 	assert.NotNil(t, err)
 	assert.Contains(t, err.Error(), response)
 
 	errorsCount := strings.Count(err.Error(), response)
 	assert.Equal(t, 1, errorsCount)
-}
-
-func TestNotFound(t *testing.T) {
-	response, err := New().Guild(context.Background(), "Here to S")
-	fmt.Println(response, err)
 }

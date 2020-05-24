@@ -3,7 +3,7 @@ package v2
 import (
 	"context"
 
-	"github.com/xonvanetta/tibiadata/tibia"
+	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
 type Worlds struct {
@@ -24,8 +24,8 @@ type WorldsResponse struct {
 	Information Information `json:"information"`
 }
 
-func (c Client) Worlds(context context.Context) (WorldsResponse, error) {
+func (c client) Worlds(context context.Context) (WorldsResponse, error) {
 	var worldsResponse WorldsResponse
-	err := c.get(context, "worlds.json", &worldsResponse)
+	err := c.client.Get(context, tibiaDataURL("worlds.json"), &worldsResponse)
 	return worldsResponse, err
 }

@@ -1,4 +1,4 @@
-package e2e
+package v2
 
 import (
 	"context"
@@ -9,14 +9,15 @@ import (
 	"testing"
 	"time"
 
+	v2 "github.com/xonvanetta/tibiadata/pkg/tibiadata/v2"
+
 	"github.com/stretchr/testify/assert"
-	"github.com/xonvanetta/tibiadata/tibia"
-	v2 "github.com/xonvanetta/tibiadata/v2"
+	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
 func mockServer(t *testing.T) *httptest.Server {
 	return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		file, err := os.Open("./tibiadata/" + r.URL.Path)
+		file, err := os.Open("./data" + r.URL.Path)
 		assert.NoError(t, err)
 
 		_, err = io.Copy(w, file)
@@ -161,7 +162,7 @@ func TestEndpoints(t *testing.T) {
 	defer server.Close()
 	v2.URL = server.URL + "/"
 
-	client := v2.New()
+	client := v2.NewClient()
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {

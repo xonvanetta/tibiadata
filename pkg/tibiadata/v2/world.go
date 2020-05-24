@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/xonvanetta/tibiadata/tibia"
+	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
 type WorldResponse struct {
@@ -21,7 +21,7 @@ type WorldInformation struct {
 	Name             string         `json:"name"`
 	PlayersOnline    int            `json:"players_online"`
 	OnlineRecord     OnlineRecord   `json:"online_record"`
-	CreationDate     string         `json:"creation_date"` //Todo 2006-01-02 time
+	CreationDate     string         `json:"creation_date"` //1997-01
 	Location         tibia.Location `json:"location"`
 	PvpType          tibia.PvPType  `json:"pvp_type"`
 	WorldQuestTitles []string       `json:"world_quest_titles"`
@@ -43,9 +43,9 @@ type PlayerOnline struct {
 	Vocation tibia.Vocation `json:"vocation"`
 }
 
-func (c Client) World(context context.Context, name string) (WorldResponse, error) {
+func (c client) World(context context.Context, name string) (WorldResponse, error) {
 	var worldResponse WorldResponse
-	url := fmt.Sprintf("world/%s.json", name)
-	err := c.get(context, url, &worldResponse)
+	url := tibiaDataURL(fmt.Sprintf("world/%s.json", name))
+	err := c.client.Get(context, url, &worldResponse)
 	return worldResponse, err
 }

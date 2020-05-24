@@ -2,12 +2,10 @@ package v2
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"log"
-	"time"
 
-	"github.com/xonvanetta/tibiadata/tibia"
+	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
 type Guild struct {
@@ -34,16 +32,6 @@ type GuildCharacter struct {
 	Vocation tibia.Vocation `json:"vocation"`
 	Joined   Date           `json:"joined"`
 	Online   Online         `json:"status"`
-}
-
-type Date struct {
-	time.Time
-}
-
-func (d *Date) UnmarshalJSON(b []byte) error {
-	var err error
-	d.Time, err = time.Parse(`"2006-01-02"`, string(b))
-	return err
 }
 
 type Online bool
@@ -73,7 +61,7 @@ type GuildData struct {
 	War           bool `json:"war"`
 	OnlineStatus  int  `json:"online_status"`
 	OfflineStatus int  `json:"offline_status"`
-	//Disbanded     bool      `json:"disbanded"`
+	//Disbanded     bool   `json:"disbanded"`
 	Totalmembers int    `json:"totalmembers"`
 	Totalinvited int    `json:"totalinvited"`
 	World        string `json:"world"`
@@ -95,14 +83,10 @@ type GuildResponse struct {
 	Information Information `json:"information"`
 }
 
-var (
-	ErrNotFound = errors.New("tibiadata: not found")
-)
-
-func (c Client) Guild(context context.Context, name string) (GuildResponse, error) {
+func (c client) Guild(context context.Context, name string) (GuildResponse, error) {
 	var guildResponse GuildResponse
-	url := fmt.Sprintf("guild/%s.json", name)
-	err := c.get(context, url, &guildResponse)
+	url := tibiaDataURL(fmt.Sprintf("guild/%s.json", name))
+	err := c.client.Get(context, url, &guildResponse)
 	if guildResponse.Guild.Error != "" {
 		return guildResponse, guildToError(guildResponse.Guild.Error)
 	}
