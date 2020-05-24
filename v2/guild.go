@@ -2,13 +2,16 @@ package v2
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/xonvanetta/tibiadata/tibia"
 )
 
 type Guild struct {
+	Error   string         `json:"error"`
 	Data    GuildData      `json:"data"`
 	Members []GuildMembers `json:"members"`
 	Invited []GuildInvite  `json:"invited"`
@@ -92,9 +95,27 @@ type GuildResponse struct {
 	Information Information `json:"information"`
 }
 
+var (
+	ErrNotFound = errors.New("tibiadata: not found")
+)
+
 func (c Client) Guild(context context.Context, name string) (GuildResponse, error) {
 	var guildResponse GuildResponse
 	url := fmt.Sprintf("guild/%s.json", name)
 	err := c.get(context, url, &guildResponse)
+	if guildResponse.Guild.Error != "" {
+		return guildResponse, guildToError(guildResponse.Guild.Error)
+	}
+
 	return guildResponse, err
+}
+
+func guildToError(err string) error {
+	switch err {
+	case "Guild does not exist.":
+		return ErrNotFound
+	default:
+		log.Println(fmt.Sprintf("err not found in error list: %s", err))
+		return fmt.Errorf(err)
+	}
 }

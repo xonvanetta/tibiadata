@@ -52,18 +52,6 @@ func (e Errors) Error() string {
 	return text
 }
 
-func (e Errors) IsAllNotFound() bool {
-	allNotFound := true
-	for _, err := range e {
-		if !err.IsNotFound() {
-			allNotFound = false
-			break
-		}
-	}
-
-	return allNotFound
-}
-
 func (e Errors) Unwrap() error {
 	return e[len(e)-1]
 }
@@ -113,10 +101,6 @@ func (e Error) Unwrap() error {
 
 func (e Error) Error() string {
 	return fmt.Sprintf("url: %s, statusCode: %d, err: %s", e.Url, e.StatusCode, e.Err)
-}
-
-func (e Error) IsNotFound() bool {
-	return e.StatusCode == http.StatusNotFound
 }
 
 func requestError(request *http.Request, err error) *Error {

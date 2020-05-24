@@ -3,6 +3,7 @@ package v2
 import (
 	"context"
 	"errors"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -82,11 +83,7 @@ func TestErrorBodyText(t *testing.T) {
 	assert.Equal(t, 1, errorsCount)
 }
 
-func TestErrorsIsAllNotFound(t *testing.T) {
-	var errors Errors
-	errors.Add(&Error{
-		Err:        nil,
-		StatusCode: 0,
-		Url:        "",
-	})
+func TestNotFound(t *testing.T) {
+	response, err := New().Guild(context.Background(), "Here to S")
+	fmt.Println(response, err)
 }
