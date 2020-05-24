@@ -19,6 +19,10 @@ const (
 	VocationMasterSorcerer Vocation = "Master Sorcerer"
 )
 
+func (v Vocation) String() string {
+	return string(v)
+}
+
 func (v *Vocation) Unmarshal(b []byte) error {
 	vocation := Vocation(strings.Trim(string(b), `"`))
 	switch vocation {

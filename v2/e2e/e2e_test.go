@@ -7,6 +7,7 @@ import (
 	"net/http/httptest"
 	"os"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/xonvanetta/tibiadata/tibia"
@@ -142,14 +143,16 @@ func TestEndpoints(t *testing.T) {
 				assert.Equal(t, "Leader", response.Guild.Members[0].RankTitle)
 				assert.Equal(t, "Avora Skyfallen", response.Guild.Members[0].Characters[0].Name)
 				assert.Equal(t, tibia.VocationMasterSorcerer, response.Guild.Members[0].Characters[0].Vocation)
-				assert.Equal(t, 239, response.Guild.Members[0].Characters[0].Level)
-				assert.Equal(t, "offline", response.Guild.Members[0].Characters[0].Status)
+				assert.Equal(t, uint64(239), response.Guild.Members[0].Characters[0].Level)
+				assert.Equal(t, time.Date(2013, 04, 07, 0, 0, 0, 0, time.UTC), response.Guild.Members[0].Characters[0].Joined.Time)
+				assert.Equal(t, false, response.Guild.Members[0].Characters[0].Online.Bool())
 
 				assert.Equal(t, "Praetor", response.Guild.Members[1].RankTitle)
 				assert.Equal(t, "Miujau", response.Guild.Members[1].Characters[0].Name)
 				assert.Equal(t, tibia.VocationEliteKnight, response.Guild.Members[1].Characters[0].Vocation)
-				assert.Equal(t, 321, response.Guild.Members[1].Characters[0].Level)
-				assert.Equal(t, "offline", response.Guild.Members[1].Characters[0].Status)
+				assert.Equal(t, uint64(321), response.Guild.Members[1].Characters[0].Level)
+				assert.Equal(t, time.Date(2014, 02, 17, 0, 0, 0, 0, time.UTC), response.Guild.Members[1].Characters[0].Joined.Time)
+				assert.Equal(t, false, response.Guild.Members[1].Characters[0].Online.Bool())
 			},
 		},
 	}

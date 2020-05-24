@@ -11,8 +11,13 @@ import (
 )
 
 var (
-	URL     = "http://api.tibiadata.com/v2/"
+	URL     = "https://api.tibiadata.com/v2/"
 	Retries = 5
+)
+
+var (
+	location               *time.Location
+	jsonUnmarshalTypeError *json.UnmarshalTypeError
 )
 
 type Client struct {
@@ -33,7 +38,7 @@ func NewWithClient(client *http.Client) Client {
 	}
 }
 
-type Errors []error
+type Errors []*Error
 
 func (e Errors) Error() string {
 	text := ""
@@ -47,11 +52,23 @@ func (e Errors) Error() string {
 	return text
 }
 
+func (e Errors) IsAllNotFound() bool {
+	allNotFound := true
+	for _, err := range e {
+		if !err.IsNotFound() {
+			allNotFound = false
+			break
+		}
+	}
+
+	return allNotFound
+}
+
 func (e Errors) Unwrap() error {
 	return e[len(e)-1]
 }
 
-func (e *Errors) Add(err error) {
+func (e *Errors) Add(err *Error) {
 	*e = append(*e, err)
 }
 
@@ -84,16 +101,36 @@ func (c Client) get(context context.Context, path string, v interface{}) error {
 	return errs
 }
 
-var jsonUnmarshalTypeError *json.UnmarshalTypeError
-
-func requestError(request *http.Request, err error) error {
-	if request.Response == nil {
-		return fmt.Errorf("url: %s, err: %w", request.URL, err)
-	}
-	return fmt.Errorf("url: %s, statusCode: %d, err: %w", request.URL, request.Response.StatusCode, err)
+type Error struct {
+	Err        error
+	StatusCode int
+	Url        string
 }
 
-func (c Client) request(request *http.Request, v interface{}) error {
+func (e Error) Unwrap() error {
+	return e.Err
+}
+
+func (e Error) Error() string {
+	return fmt.Sprintf("url: %s, statusCode: %d, err: %s", e.Url, e.StatusCode, e.Err)
+}
+
+func (e Error) IsNotFound() bool {
+	return e.StatusCode == http.StatusNotFound
+}
+
+func requestError(request *http.Request, err error) *Error {
+	e := &Error{
+		Err: err,
+		Url: request.URL.String(),
+	}
+	if request.Response != nil {
+		e.StatusCode = request.Response.StatusCode
+	}
+	return e
+}
+
+func (c Client) request(request *http.Request, v interface{}) *Error {
 	response, err := c.http.Do(request)
 	if err != nil {
 		return requestError(request, fmt.Errorf("failed to do request: %w", err))
@@ -128,9 +165,12 @@ type Time struct {
 }
 
 func (t *Time) UnmarshalJSON(b []byte) error {
-	location, err := time.LoadLocation("Europe/Stockholm")
-	if err != nil {
-		panic(fmt.Errorf("failed to load location for tibiadata: %w", err))
+	var err error
+	if location == nil {
+		location, err = time.LoadLocation("Europe/Stockholm")
+		if err != nil {
+			panic(fmt.Errorf("tibiadata: failed to load location: %w", err))
+		}
 	}
 
 	t.Time, err = time.ParseInLocation(`"2006-01-02 15:04:05"`, string(b), location)

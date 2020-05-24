@@ -14,7 +14,7 @@ func info(format string, args ...interface{}) {
 	log.Println(fmt.Sprintf("Integration Test: "+format, args...))
 }
 
-func TestAll(t *testing.T) {
+func TestAllGuilds(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping test, Really long test is not verified yet. JSON unmarshal error guaranteed.")
 	}
@@ -26,10 +26,16 @@ func TestAll(t *testing.T) {
 	for _, world := range worlds.Worlds.Allworlds {
 		info("running world: %s", world.Name)
 		_, err := client.World(context.Background(), world.Name)
-		assert.NoError(t, err)
-
+		if err != nil {
+			assert.NoError(t, err)
+			panic(err)
+		}
 		guilds, err := client.Guilds(context.Background(), world.Name)
-		assert.NoError(t, err)
+		if err != nil {
+			assert.NoError(t, err)
+			panic(err)
+		}
+
 
 		for _, guild := range guilds.Guilds.Active {
 			info("running guild: %s, world: %s", guild.Name, world.Name)

@@ -8,6 +8,7 @@ import (
 	"strings"
 	"sync/atomic"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -19,6 +20,7 @@ func TestContext(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		atomic.AddInt32(&count, 1)
 		cancel()
+		time.Sleep(time.Millisecond)
 		writer.WriteHeader(http.StatusOK)
 	}))
 	defer server.Close()
@@ -78,4 +80,13 @@ func TestErrorBodyText(t *testing.T) {
 
 	errorsCount := strings.Count(err.Error(), response)
 	assert.Equal(t, 1, errorsCount)
+}
+
+func TestErrorsIsAllNotFound(t *testing.T) {
+	var errors Errors
+	errors.Add(&Error{
+		Err:        nil,
+		StatusCode: 0,
+		Url:        "",
+	})
 }
