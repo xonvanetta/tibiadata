@@ -83,10 +83,10 @@ type GuildResponse struct {
 	Information Information `json:"information"`
 }
 
-func (c client) Guild(context context.Context, name string) (GuildResponse, error) {
-	var guildResponse GuildResponse
+func (c client) Guild(context context.Context, name string) (*GuildResponse, error) {
+	guildResponse := &GuildResponse{}
 	url := tibiaDataURL(fmt.Sprintf("guild/%s.json", name))
-	err := c.client.Get(context, url, &guildResponse)
+	err := c.client.Get(context, url, guildResponse)
 	if guildResponse.Guild.Error != "" {
 		return guildResponse, guildToError(guildResponse.Guild.Error)
 	}

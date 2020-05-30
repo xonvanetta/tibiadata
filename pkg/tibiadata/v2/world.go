@@ -43,9 +43,9 @@ type PlayerOnline struct {
 	Vocation tibia.Vocation `json:"vocation"`
 }
 
-func (c client) World(context context.Context, name string) (WorldResponse, error) {
-	var worldResponse WorldResponse
+func (c client) World(context context.Context, name string) (*WorldResponse, error) {
+	worldResponse := &WorldResponse{}
 	url := tibiaDataURL(fmt.Sprintf("world/%s.json", name))
-	err := c.client.Get(context, url, &worldResponse)
+	err := c.client.Get(context, url, worldResponse)
 	return worldResponse, err
 }

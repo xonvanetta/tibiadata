@@ -15,7 +15,7 @@ import (
 	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
-func mockServer(t *testing.T) *httptest.Server {
+func mockServer(t testing.TB) *httptest.Server {
 	return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		file, err := os.Open("./data" + r.URL.Path)
 		assert.NoError(t, err)

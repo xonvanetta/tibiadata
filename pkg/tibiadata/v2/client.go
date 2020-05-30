@@ -10,11 +10,11 @@ import (
 )
 
 type Client interface {
-	Guild(context.Context, string) (GuildResponse, error)
-	Guilds(context.Context, string) (GuildsResponse, error)
+	Guild(context.Context, string) (*GuildResponse, error)
+	Guilds(context.Context, string) (*GuildsResponse, error)
 
-	World(context.Context, string) (WorldResponse, error)
-	Worlds(context.Context) (WorldsResponse, error)
+	World(context.Context, string) (*WorldResponse, error)
+	Worlds(context.Context) (*WorldsResponse, error)
 }
 
 type client struct {

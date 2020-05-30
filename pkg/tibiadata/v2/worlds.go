@@ -24,8 +24,8 @@ type WorldsResponse struct {
 	Information Information `json:"information"`
 }
 
-func (c client) Worlds(context context.Context) (WorldsResponse, error) {
-	var worldsResponse WorldsResponse
-	err := c.client.Get(context, tibiaDataURL("worlds.json"), &worldsResponse)
+func (c client) Worlds(context context.Context) (*WorldsResponse, error) {
+	worldsResponse := &WorldsResponse{}
+	err := c.client.Get(context, tibiaDataURL("worlds.json"), worldsResponse)
 	return worldsResponse, err
 }

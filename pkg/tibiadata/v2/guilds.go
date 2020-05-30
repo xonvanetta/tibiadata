@@ -22,9 +22,9 @@ type GuildsResponse struct {
 	Information Information `json:"information"`
 }
 
-func (c client) Guilds(context context.Context, world string) (GuildsResponse, error) {
-	var guildsResponse GuildsResponse
+func (c client) Guilds(context context.Context, world string) (*GuildsResponse, error) {
+	guildsResponse := &GuildsResponse{}
 	url := tibiaDataURL(fmt.Sprintf("guilds/%s.json", world))
-	err := c.client.Get(context, url, &guildsResponse)
+	err := c.client.Get(context, url, guildsResponse)
 	return guildsResponse, err
 }
