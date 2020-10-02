@@ -15,6 +15,8 @@ type Client interface {
 
 	World(ctx context.Context, name string) (*WorldResponse, error)
 	Worlds(ctx context.Context) (*WorldsResponse, error)
+
+	Character(ctx context.Context, name string) (*CharacterResponse, error)
 }
 
 type client struct {
@@ -43,6 +45,12 @@ type Information struct {
 	ExecutionTime float64 `json:"execution_time"`
 	LastUpdated   Time    `json:"last_updated"`
 	Timestamp     Time    `json:"timestamp"`
+}
+
+type Timezone struct {
+	Date         string `json:"date"`
+	TimezoneType int    `json:"timezone_type"`
+	Timezone     string `json:"timezone"`
 }
 
 type Time struct {
