@@ -102,3 +102,18 @@ func TestAnticaCharacters(t *testing.T) {
 		}
 	}
 }
+
+func TestAnticaHighscore(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping test, Really long test is not verified yet. JSON unmarshal error guaranteed.")
+	}
+
+	v2.URL = "https://api.tibiadata.com/v2/"
+	client := v2.NewClient()
+
+	_, err := client.Highscore(context.Background(), "Antica", "", "")
+	if err != nil {
+		assert.NoError(t, err)
+		panic(err)
+	}
+}
