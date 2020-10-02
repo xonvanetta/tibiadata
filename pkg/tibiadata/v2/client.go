@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/xonvanetta/tibiadata/internal/httpclient"
+	"github.com/xonvanetta/tibiadata/pkg/tibia"
 )
 
 type Client interface {
@@ -17,6 +18,8 @@ type Client interface {
 	Worlds(ctx context.Context) (*WorldsResponse, error)
 
 	Character(ctx context.Context, name string) (*CharacterResponse, error)
+
+	Highscore(ctx context.Context, world, category string, vocation tibia.Vocation) (*HighscoreResponse, error)
 }
 
 type client struct {
