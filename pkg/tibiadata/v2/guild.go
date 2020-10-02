@@ -9,29 +9,29 @@ import (
 )
 
 type Guild struct {
-	Error   string         `json:"error"`
-	Data    GuildData      `json:"data"`
-	Members []GuildMembers `json:"members"`
-	Invited []GuildInvite  `json:"invited"`
+	Error   string          `json:"error"`
+	Data    *GuildData      `json:"data"`
+	Members []*GuildMembers `json:"members"`
+	Invited []*GuildInvite  `json:"invited"`
 }
 
 type GuildMembers struct {
-	RankTitle  string           `json:"rank_title"`
-	Characters []GuildCharacter `json:"characters"`
+	RankTitle  string            `json:"rank_title"`
+	Characters []*GuildCharacter `json:"characters"`
 }
 
 type GuildInvite struct {
 	Name    string `json:"name"`
-	Invited Date   `json:"invited"`
+	Invited *Date  `json:"invited"`
 }
 
 type GuildCharacter struct {
-	Name     string         `json:"name"`
-	Nick     string         `json:"nick"`
-	Level    uint64         `json:"level"`
-	Vocation tibia.Vocation `json:"vocation"`
-	Joined   Date           `json:"joined"`
-	Online   Online         `json:"status"`
+	Name     string          `json:"name"`
+	Nick     string          `json:"nick"`
+	Level    uint64          `json:"level"`
+	Vocation *tibia.Vocation `json:"vocation"`
+	Joined   *Date           `json:"joined"`
+	Online   *Online         `json:"status"`
 }
 
 type Online bool
@@ -79,8 +79,8 @@ type GuildData struct {
 //}
 
 type GuildResponse struct {
-	Guild       Guild       `json:"guild"`
-	Information Information `json:"information"`
+	Guild       *Guild       `json:"guild"`
+	Information *Information `json:"information"`
 }
 
 func (c client) Guild(context context.Context, name string) (*GuildResponse, error) {

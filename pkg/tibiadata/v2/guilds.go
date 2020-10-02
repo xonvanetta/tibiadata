@@ -6,9 +6,9 @@ import (
 )
 
 type Guilds struct {
-	World     string             `json:"world"`
-	Active    []GuildInformation `json:"active"`
-	Formation []GuildInformation `json:"formation"`
+	World     string              `json:"world"`
+	Active    []*GuildInformation `json:"active"`
+	Formation []*GuildInformation `json:"formation"`
 }
 
 type GuildInformation struct {
@@ -18,8 +18,8 @@ type GuildInformation struct {
 }
 
 type GuildsResponse struct {
-	Guilds      Guilds      `json:"guilds"`
-	Information Information `json:"information"`
+	Guilds      *Guilds      `json:"guilds"`
+	Information *Information `json:"information"`
 }
 
 func (c client) Guilds(context context.Context, world string) (*GuildsResponse, error) {
