@@ -29,12 +29,8 @@ type WorldInformation struct {
 }
 
 type OnlineRecord struct {
-	Players int `json:"players"`
-	Date    struct {
-		Date         string `json:"date"`
-		TimezoneType int    `json:"timezone_type"`
-		Timezone     string `json:"timezone"`
-	} `json:"date"`
+	Players int       `json:"players"`
+	Date    *Timezone `json:"date"`
 }
 
 type PlayerOnline struct {

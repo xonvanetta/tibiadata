@@ -82,3 +82,23 @@ func TestAllWorlds(t *testing.T) {
 		}
 	}
 }
+
+func TestAnticaCharacters(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping test, Really long test is not verified yet. JSON unmarshal error guaranteed.")
+	}
+
+	v2.URL = "https://api.tibiadata.com/v2/"
+	client := v2.NewClient()
+
+	world, err := client.World(context.Background(), "Antica")
+	assert.NoError(t, err)
+
+	for _, player := range world.World.PlayersOnline {
+		_, err := client.Character(context.Background(), player.Name)
+		if err != nil {
+			assert.NoError(t, err)
+			panic(err)
+		}
+	}
+}
