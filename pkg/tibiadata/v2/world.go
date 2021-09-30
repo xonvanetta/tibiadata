@@ -12,6 +12,19 @@ type WorldResponse struct {
 	Information *Information `json:"information"`
 }
 
+func (wr WorldResponse) validate() error {
+	if wr.World.WorldInformation.OnlineRecord == nil {
+		return fmt.Errorf("missing online record")
+	}
+	if wr.World.WorldInformation.PvpType == nil {
+		return fmt.Errorf("missing pvp type")
+	}
+	if wr.World.WorldInformation.Location == nil {
+		return fmt.Errorf("missing location")
+	}
+	return nil
+}
+
 type World struct {
 	WorldInformation *WorldInformation `json:"world_information"`
 	PlayersOnline    []*PlayerOnline   `json:"players_online"`
@@ -40,8 +53,13 @@ type PlayerOnline struct {
 }
 
 func (c client) World(context context.Context, name string) (*WorldResponse, error) {
+	var err error
 	worldResponse := &WorldResponse{}
 	url := tibiaDataURL(fmt.Sprintf("world/%s.json", name))
-	err := c.client.Get(context, url, worldResponse)
+	err = c.client.Get(context, url, worldResponse)
+	if err != nil {
+		return nil, err
+	}
+	err = worldResponse.validate()
 	return worldResponse, err
 }
