@@ -27,8 +27,6 @@ type client struct {
 }
 
 var (
-	location *time.Location
-
 	URL         = "https://api.tibiadata.com/v2/"
 	ErrNotFound = errors.New("tibiadata: not found")
 )
@@ -62,14 +60,7 @@ type Time struct {
 
 func (t *Time) UnmarshalJSON(b []byte) error {
 	var err error
-	if location == nil {
-		location, err = time.LoadLocation("Europe/Stockholm")
-		if err != nil {
-			panic(fmt.Errorf("tibiadata: failed to load location: %w", err))
-		}
-	}
-
-	t.Time, err = time.ParseInLocation(`"2006-01-02 15:04:05"`, string(b), location)
+	t.Time, err = time.Parse(`"2006-01-02 15:04:05"`, string(b))
 	return err
 }
 
