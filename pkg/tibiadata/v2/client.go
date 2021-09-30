@@ -20,6 +20,8 @@ type Client interface {
 	Character(ctx context.Context, name string) (*CharacterResponse, error)
 
 	Highscore(ctx context.Context, world, category string, vocation tibia.Vocation) (*HighscoreResponse, error)
+
+	News(context context.Context, newsId int) (*NewsResponse, error)
 }
 
 type client struct {
