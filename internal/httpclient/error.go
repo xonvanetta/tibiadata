@@ -7,6 +7,10 @@ import (
 
 type Errors []*Error
 
+var (
+	ErrWrongStatusCode = fmt.Errorf("wrong status code")
+)
+
 func (e Errors) Error() string {
 	text := ""
 	for i, err := range e {
