@@ -22,7 +22,7 @@ type Client struct {
 func New() Client {
 	return Client{
 		http: &http.Client{
-			Timeout: time.Second * 10,
+			Timeout: time.Second * 30,
 		},
 		retries: 5,
 	}
@@ -44,10 +44,12 @@ func (c Client) Get(context context.Context, url string, v interface{}) error {
 	var errs Errors
 
 	for i := 0; i < c.retries; i++ {
-		select {
-		case <-context.Done():
+		if context.Err() != nil {
+			errs.Add(&Error{
+				Err: context.Err(),
+				Url: request.URL.String(),
+			})
 			return errs
-		default:
 		}
 		err := c.request(request, v)
 		if err != nil {
@@ -73,7 +75,7 @@ func (c Client) request(request *http.Request, v interface{}) *Error {
 	defer response.Body.Close()
 
 	if response.StatusCode != http.StatusOK {
-		return responseError(response, fmt.Errorf("wrong status code"))
+		return responseError(response, ErrWrongStatusCode)
 	}
 
 	data, err := ioutil.ReadAll(response.Body)
