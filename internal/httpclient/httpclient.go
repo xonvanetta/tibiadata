@@ -12,6 +12,7 @@ import (
 
 var (
 	jsonUnmarshalTypeError *json.UnmarshalTypeError
+	UserAgent              = "tibiadata/v3"
 )
 
 type Client struct {
@@ -40,6 +41,8 @@ func (c Client) Get(context context.Context, url string, v interface{}) error {
 	if err != nil {
 		return fmt.Errorf("failed to create request for url: %s, err: %w", url, err)
 	}
+
+	request.Header.Set("user-agent", UserAgent)
 
 	var errs Errors
 
