@@ -12,7 +12,7 @@ import (
 
 var (
 	jsonUnmarshalTypeError *json.UnmarshalTypeError
-	UserAgent              = "tibiadata/v3"
+	UserAgent              = "tibiadata/v4"
 )
 
 type Client struct {
